@@ -937,17 +937,42 @@ public class CSVParser {
         } 
         //Modify7
         //Convert time lists to Date format (in case comparison is needed)
-        ArrayList<Date> common_dateTime = new ArrayList<Date>();
-        ArrayList<Date> _241c_vent_ut_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _221b_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _221c_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _221d_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _221f_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _227_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _233_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _236a_dateTime = new ArrayList<Date>();
         ArrayList<Date> _238c_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _239_left_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _239_right_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _240c_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _241a_teknik_dateTime = new ArrayList<Date>();
         ArrayList<Date> _241b_technik_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _241c_vent_ut_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _242_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _256b_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _256c_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _256d_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _257a_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _257b_dateTime = new ArrayList<Date>();
+        ArrayList<Date> _01_226_floor_dateTime = new ArrayList<Date>();
         ArrayList<Date> MIP1int_dateTime = new ArrayList<Date>();
         ArrayList<Date> MIP1ext_dateTime = new ArrayList<Date>();
         ArrayList<Date> MIP2int_dateTime = new ArrayList<Date>();
         ArrayList<Date> MIP2ext_dateTime = new ArrayList<Date>();
         ArrayList<Date> MIP3int_dateTime = new ArrayList<Date>();
         ArrayList<Date> MIP3ext_dateTime = new ArrayList<Date>();
+        ArrayList<Date> Talia_dateTime = new ArrayList<Date>();
+        ArrayList<Date> BBS2_Upper_dateTime = new ArrayList<Date>();
+        ArrayList<Date> BBS2_down_dateTime = new ArrayList<Date>();
+        ArrayList<Date> BBS1_Geigerbox_dateTime = new ArrayList<Date>();
+        ArrayList<Date> Manuela_Geiger_dateTime = new ArrayList<Date>();
         ArrayList<Date> stack_monitor_dateTime = new ArrayList<Date>();
+        ArrayList<Date> Hi_stack_dateTime = new ArrayList<Date>();
+        ArrayList<Date> Cyclotron_dateTime = new ArrayList<Date>();
+        ArrayList<Date> Neutron_Probe_dateTime = new ArrayList<Date>();
         
         
         
