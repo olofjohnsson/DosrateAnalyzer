@@ -647,13 +647,61 @@ public class CSVParser {
             time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
             common_roundedtime.add(i,time);
         }
-        for (int i=0;i<_241c_vent_ut_time.size();i++){
-            time = _241c_vent_ut_time.get(i);
+        for (int i=0;i<_221b_time.size();i++){
+            time = _221b_time.get(i);
             time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
             String[] time_arr = time.split(":");
             double time_double = Double.parseDouble(time_arr[2]);
             time_arr[2] = df.format(round(time_double));
-            _241c_vent_ut_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+            _221b_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_221c_time.size();i++){
+            time = _221c_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _221c_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_221d_time.size();i++){
+            time = _221d_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _221d_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_221f_time.size();i++){
+            time = _221f_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _221f_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_227_time.size();i++){
+            time = _227_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _227_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_233_time.size();i++){
+            time = _233_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _233_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_236a_time.size();i++){
+            time = _236a_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _236a_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
         }
         for (int i=0;i<_238c_time.size();i++){
             time = _238c_time.get(i);
@@ -663,6 +711,38 @@ public class CSVParser {
             time_arr[2] = df.format(round(time_double));
             _238c_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
         }
+        for (int i=0;i<_239_left_time.size();i++){
+            time = _239_left_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _239_left_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_239_right_time.size();i++){
+            time = _239_right_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _239_right_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_240c_time.size();i++){
+            time = _240c_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _240c_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_241a_teknik_time.size();i++){
+            time = _241a_teknik_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _241a_teknik_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
         for (int i=0;i<_241b_technik_time.size();i++){
             time = _241b_technik_time.get(i);
             time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
@@ -670,6 +750,70 @@ public class CSVParser {
             double time_double = Double.parseDouble(time_arr[2]);
             time_arr[2] = df.format(round(time_double));
             _241b_technik_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_241c_vent_ut_time.size();i++){
+            time = _241c_vent_ut_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _241c_vent_ut_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_242_time.size();i++){
+            time = _242_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _242_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_256b_time.size();i++){
+            time = _256b_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _256b_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_256c_time.size();i++){
+            time = _256c_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _256c_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_256d_time.size();i++){
+            time = _256d_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _256d_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_257a_time.size();i++){
+            time = _257a_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _257a_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_257b_time.size();i++){
+            time = _257b_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _257b_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<_01_226_floor_time.size();i++){
+            time = _01_226_floor_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            _01_226_floor_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
         }
         for (int i=0;i<MIP1int_time.size();i++){
             time = MIP1int_time.get(i);
@@ -719,7 +863,46 @@ public class CSVParser {
             time_arr[2] = df.format(round(time_double));
             MIP3ext_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
         }
-        
+        for (int i=0;i<Talia_time.size();i++){
+            time = Talia_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            Talia_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<BBS2_Upper_time.size();i++){
+            time = BBS2_Upper_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            BBS2_Upper_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<BBS2_down_time.size();i++){
+            time = BBS2_down_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            BBS2_down_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<BBS1_Geigerbox_time.size();i++){
+            time = BBS1_Geigerbox_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            BBS1_Geigerbox_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<Manuela_Geiger_time.size();i++){
+            time = Manuela_Geiger_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            Manuela_Geiger_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
         for (int i=0;i<stack_monitor_time.size();i++){
             time = stack_monitor_time.get(i);
             time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
@@ -728,8 +911,30 @@ public class CSVParser {
             time_arr[2] = df.format(round(time_double));
             stack_monitor_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
         }
-        
-        
+        for (int i=0;i<Hi_stack_time.size();i++){
+            time = Hi_stack_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            Hi_stack_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<Cyclotron_time.size();i++){
+            time = Cyclotron_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            Cyclotron_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
+        for (int i=0;i<Neutron_Probe_time.size();i++){
+            time = Neutron_Probe_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            Neutron_Probe_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        } 
         //Modify7
         //Convert time lists to Date format (in case comparison is needed)
         ArrayList<Date> common_dateTime = new ArrayList<Date>();
