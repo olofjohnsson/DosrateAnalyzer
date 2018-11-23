@@ -937,6 +937,7 @@ public class CSVParser {
         } 
         //Modify7
         //Convert time lists to Date format (in case comparison is needed)
+        ArrayList<Date> common_dateTime = new ArrayList<Date>();
         ArrayList<Date> _221b_dateTime = new ArrayList<Date>();
         ArrayList<Date> _221c_dateTime = new ArrayList<Date>();
         ArrayList<Date> _221d_dateTime = new ArrayList<Date>();
@@ -973,9 +974,7 @@ public class CSVParser {
         ArrayList<Date> Hi_stack_dateTime = new ArrayList<Date>();
         ArrayList<Date> Cyclotron_dateTime = new ArrayList<Date>();
         ArrayList<Date> Neutron_Probe_dateTime = new ArrayList<Date>();
-        
-        
-        
+
         //Modify8
         //Set date format to only time
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
