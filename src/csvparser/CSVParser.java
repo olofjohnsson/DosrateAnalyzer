@@ -978,7 +978,6 @@ public class CSVParser {
         //Modify8
         //Set date format to only time
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
-
         for (String dateString : common_roundedtime) {
             try {
                 common_dateTime.add(simpleDateFormat.parse(dateString));
@@ -986,9 +985,51 @@ public class CSVParser {
                 e.printStackTrace();
             }
         }
-        for (String dateString : _241c_vent_ut_roundedtime) {
+        for (String dateString : _221b_roundedtime) {
             try {
-                _241c_vent_ut_dateTime.add(simpleDateFormat.parse(dateString));
+                _221b_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _221c_roundedtime) {
+            try {
+                _221c_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _221d_roundedtime) {
+            try {
+                _221d_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _221f_roundedtime) {
+            try {
+                _221f_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _227_roundedtime) {
+            try {
+                _227_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _233_roundedtime) {
+            try {
+                _233_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _236a_roundedtime) {
+            try {
+                _236a_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -1000,108 +1041,371 @@ public class CSVParser {
                 e.printStackTrace();
             }
         }
-        for (String dateString : _241b_technik_roundedtime) {
+        for (String dateString : _239_left_roundedtime) {
+            try {
+                _239_left_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _239_right_roundedtime) {
+            try {
+                _239_right_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : _240c_roundedtime) {
+            try {
+                _240c_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _241a_teknik_roundedtime) {
+            try {
+                _241a_teknik_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _241b_technik_roundedtime) {
             try {
                 _241b_technik_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        for (String dateString : MIP1int_roundedtime) {
+	for (String dateString : _241c_vent_ut_roundedtime) {
+            try {
+                _241c_vent_ut_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _242_roundedtime) {
+            try {
+                _242_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _256b_roundedtime) {
+            try {
+                _256b_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _256c_roundedtime) {
+            try {
+                _256c_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _256d_roundedtime) {
+            try {
+                _256d_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _257a_roundedtime) {
+            try {
+                _257a_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _257b_roundedtime) {
+            try {
+                _257b_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : _01_226_floor_roundedtime) {
+            try {
+                _01_226_floor_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : MIP1int_roundedtime) {
             try {
                 MIP1int_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        for (String dateString : MIP1ext_roundedtime) {
+	for (String dateString : MIP1ext_roundedtime) {
             try {
                 MIP1ext_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        for (String dateString : MIP2int_roundedtime) {
+	for (String dateString : MIP2int_roundedtime) {
             try {
                 MIP2int_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        for (String dateString : MIP2ext_roundedtime) {
+	for (String dateString : MIP2ext_roundedtime) {
             try {
                 MIP2ext_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        for (String dateString : MIP3int_roundedtime) {
+	for (String dateString : MIP3int_roundedtime) {
             try {
                 MIP3int_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        for (String dateString : MIP3ext_roundedtime) {
+	for (String dateString : MIP3ext_roundedtime) {
             try {
                 MIP3ext_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        for (String dateString : stack_monitor_roundedtime) {
+	for (String dateString : Talia_roundedtime) {
+            try {
+                Talia_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : BBS2_Upper_roundedtime) {
+            try {
+                BBS2_Upper_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : BBS2_down_roundedtime) {
+            try {
+                BBS2_down_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : BBS1_Geigerbox_roundedtime) {
+            try {
+                BBS1_Geigerbox_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : Manuela_Geiger_roundedtime) {
+            try {
+                Manuela_Geiger_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : stack_monitor_roundedtime) {
             try {
                 stack_monitor_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
-        
-        //Modify9
-        ArrayList<Integer> _241c_vent_ut_index = new ArrayList<Integer>();
-        ArrayList<Integer> _238c_index = new ArrayList<Integer>();
-        ArrayList<Integer> _241b_technik_index = new ArrayList<Integer>();
-        ArrayList<Integer> MIP1int_index = new ArrayList<Integer>();
-        ArrayList<Integer> MIP1ext_index = new ArrayList<Integer>();
-        ArrayList<Integer> MIP2int_index = new ArrayList<Integer>();
-        ArrayList<Integer> MIP2ext_index = new ArrayList<Integer>();
-        ArrayList<Integer> MIP3int_index = new ArrayList<Integer>();
-        ArrayList<Integer> MIP3ext_index = new ArrayList<Integer>();
-        ArrayList<Integer> stack_monitor_index = new ArrayList<Integer>();
-        
+	for (String dateString : Hi_stack_roundedtime) {
+            try {
+                Hi_stack_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : Cyclotron_roundedtime) {
+            try {
+                Cyclotron_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+	for (String dateString : Neutron_Probe_roundedtime) {
+            try {
+                Neutron_Probe_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
         //Loop through varible time axes and create index array where
         //each index correspnds to a matcing time stamp in the common time list
         int current = 0;
         
-        for(int i=0;i<_241c_vent_ut_dateTime.size();i++){
+        for(int i=0;i<_221b_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
-                if(_241c_vent_ut_dateTime.get(i).equals(common_dateTime.get(j))){
-                    _241c_vent_ut_values_extended.add(j,_241c_vent_ut_values.get(i));
-                    _241c_vent_ut_index.add(j);
+                if(_221b_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _221b_values_extended.add(j,_221b_values.get(i));
                     current = j+1;
-                    if(!(i==_241c_vent_ut_dateTime.size()-1)){
+                    if(!(i==_221b_dateTime.size()-1)){
                         break;
                     }
                 }else{
                     if (i == 0){
                         i++;
                     }
-                    if(i==_241c_vent_ut_dateTime.size()-1){
-                        _241c_vent_ut_values_extended.add(j,_241c_vent_ut_values.get(i));
+                    if(i==_221b_dateTime.size()-1){
+                        _221b_values_extended.add(j,_221b_values.get(i));
                         current = j+1;
                     }else{
-                        _241c_vent_ut_values_extended.add(j,_241c_vent_ut_values.get(i-1)); 
+                        _221b_values_extended.add(j,_221b_values.get(i-1)); 
                         current = j+1;
                     }
                 }
             }
         }
         current = 0;
-        for(int i=0;i<_238c_dateTime.size();i++){
+        for(int i=0;i<_221c_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_221c_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _221c_values_extended.add(j,_221c_values.get(i));
+                    current = j+1;
+                    if(!(i==_221c_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_221c_dateTime.size()-1){
+                        _221c_values_extended.add(j,_221c_values.get(i));
+                        current = j+1;
+                    }else{
+                        _221c_values_extended.add(j,_221c_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_221d_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_221d_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _221d_values_extended.add(j,_221d_values.get(i));
+                    current = j+1;
+                    if(!(i==_221d_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_221d_dateTime.size()-1){
+                        _221d_values_extended.add(j,_221d_values.get(i));
+                        current = j+1;
+                    }else{
+                        _221d_values_extended.add(j,_221d_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_221f_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_221f_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _221f_values_extended.add(j,_221f_values.get(i));
+                    current = j+1;
+                    if(!(i==_221f_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_221f_dateTime.size()-1){
+                        _221f_values_extended.add(j,_221f_values.get(i));
+                        current = j+1;
+                    }else{
+                        _221f_values_extended.add(j,_221f_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_227_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_227_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _227_values_extended.add(j,_227_values.get(i));
+                    current = j+1;
+                    if(!(i==_227_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_227_dateTime.size()-1){
+                        _227_values_extended.add(j,_227_values.get(i));
+                        current = j+1;
+                    }else{
+                        _227_values_extended.add(j,_227_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_233_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_233_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _233_values_extended.add(j,_233_values.get(i));
+                    current = j+1;
+                    if(!(i==_233_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_233_dateTime.size()-1){
+                        _233_values_extended.add(j,_233_values.get(i));
+                        current = j+1;
+                    }else{
+                        _233_values_extended.add(j,_233_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_236a_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_236a_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _236a_values_extended.add(j,_236a_values.get(i));
+                    current = j+1;
+                    if(!(i==_236a_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_236a_dateTime.size()-1){
+                        _236a_values_extended.add(j,_236a_values.get(i));
+                        current = j+1;
+                    }else{
+                        _236a_values_extended.add(j,_236a_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_238c_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(_238c_dateTime.get(i).equals(common_dateTime.get(j))){
                     _238c_values_extended.add(j,_238c_values.get(i));
-                    _238c_index.add(j);
                     current = j+1;
                     if(!(i==_238c_dateTime.size()-1)){
                         break;
@@ -1120,12 +1424,103 @@ public class CSVParser {
                 }
             }
         }
-        current = 0;
-        for(int i=0;i<_241b_technik_dateTime.size();i++){
+	current = 0;
+	for(int i=0;i<_239_left_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_239_left_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _239_left_values_extended.add(j,_239_left_values.get(i));
+                    current = j+1;
+                    if(!(i==_239_left_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_239_left_dateTime.size()-1){
+                        _239_left_values_extended.add(j,_239_left_values.get(i));
+                        current = j+1;
+                    }else{
+                        _239_left_values_extended.add(j,_239_left_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_239_right_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_239_right_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _239_right_values_extended.add(j,_239_right_values.get(i));
+                    current = j+1;
+                    if(!(i==_239_right_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_239_right_dateTime.size()-1){
+                        _239_right_values_extended.add(j,_239_right_values.get(i));
+                        current = j+1;
+                    }else{
+                        _239_right_values_extended.add(j,_239_right_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_240c_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_240c_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _240c_values_extended.add(j,_240c_values.get(i));
+                    current = j+1;
+                    if(!(i==_240c_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_240c_dateTime.size()-1){
+                        _240c_values_extended.add(j,_240c_values.get(i));
+                        current = j+1;
+                    }else{
+                        _240c_values_extended.add(j,_240c_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_241a_teknik_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_241a_teknik_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _241a_teknik_values_extended.add(j,_241a_teknik_values.get(i));
+                    current = j+1;
+                    if(!(i==_241a_teknik_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_241a_teknik_dateTime.size()-1){
+                        _241a_teknik_values_extended.add(j,_241a_teknik_values.get(i));
+                        current = j+1;
+                    }else{
+                        _241a_teknik_values_extended.add(j,_241a_teknik_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_241b_technik_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(_241b_technik_dateTime.get(i).equals(common_dateTime.get(j))){
                     _241b_technik_values_extended.add(j,_241b_technik_values.get(i));
-                    _241b_technik_index.add(j);
                     current = j+1;
                     if(!(i==_241b_technik_dateTime.size()-1)){
                         break;
@@ -1144,12 +1539,195 @@ public class CSVParser {
                 }
             }
         }
-        current = 0;
-        for(int i=0;i<MIP1int_dateTime.size();i++){
+	current = 0;
+	for(int i=0;i<_241c_vent_ut_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_241c_vent_ut_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _241c_vent_ut_values_extended.add(j,_241c_vent_ut_values.get(i));
+                    current = j+1;
+                    if(!(i==_241c_vent_ut_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_241c_vent_ut_dateTime.size()-1){
+                        _241c_vent_ut_values_extended.add(j,_241c_vent_ut_values.get(i));
+                        current = j+1;
+                    }else{
+                        _241c_vent_ut_values_extended.add(j,_241c_vent_ut_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_242_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_242_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _242_values_extended.add(j,_242_values.get(i));
+                    current = j+1;
+                    if(!(i==_242_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_242_dateTime.size()-1){
+                        _242_values_extended.add(j,_242_values.get(i));
+                        current = j+1;
+                    }else{
+                        _242_values_extended.add(j,_242_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_256b_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_256b_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _256b_values_extended.add(j,_256b_values.get(i));
+                    current = j+1;
+                    if(!(i==_256b_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_256b_dateTime.size()-1){
+                        _256b_values_extended.add(j,_256b_values.get(i));
+                        current = j+1;
+                    }else{
+                        _256b_values_extended.add(j,_256b_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_256c_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_256c_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _256c_values_extended.add(j,_256c_values.get(i));
+                    current = j+1;
+                    if(!(i==_256c_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_256c_dateTime.size()-1){
+                        _256c_values_extended.add(j,_256c_values.get(i));
+                        current = j+1;
+                    }else{
+                        _256c_values_extended.add(j,_256c_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_256d_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_256d_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _256d_values_extended.add(j,_256d_values.get(i));
+                    current = j+1;
+                    if(!(i==_256d_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_256d_dateTime.size()-1){
+                        _256d_values_extended.add(j,_256d_values.get(i));
+                        current = j+1;
+                    }else{
+                        _256d_values_extended.add(j,_256d_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_257a_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_257a_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _257a_values_extended.add(j,_257a_values.get(i));
+                    current = j+1;
+                    if(!(i==_257a_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_257a_dateTime.size()-1){
+                        _257a_values_extended.add(j,_257a_values.get(i));
+                        current = j+1;
+                    }else{
+                        _257a_values_extended.add(j,_257a_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_257b_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_257b_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _257b_values_extended.add(j,_257b_values.get(i));
+                    current = j+1;
+                    if(!(i==_257b_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_257b_dateTime.size()-1){
+                        _257b_values_extended.add(j,_257b_values.get(i));
+                        current = j+1;
+                    }else{
+                        _257b_values_extended.add(j,_257b_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<_01_226_floor_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(_01_226_floor_dateTime.get(i).equals(common_dateTime.get(j))){
+                    _01_226_floor_values_extended.add(j,_01_226_floor_values.get(i));
+                    current = j+1;
+                    if(!(i==_01_226_floor_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==_01_226_floor_dateTime.size()-1){
+                        _01_226_floor_values_extended.add(j,_01_226_floor_values.get(i));
+                        current = j+1;
+                    }else{
+                        _01_226_floor_values_extended.add(j,_01_226_floor_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<MIP1int_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(MIP1int_dateTime.get(i).equals(common_dateTime.get(j))){
                     MIP1int_values_extended.add(j,MIP1int_values.get(i));
-                    MIP1int_index.add(j);
                     current = j+1;
                     if(!(i==MIP1int_dateTime.size()-1)){
                         break;
@@ -1168,12 +1746,11 @@ public class CSVParser {
                 }
             }
         }
-        current = 0;
-        for(int i=0;i<MIP1ext_dateTime.size();i++){
+	current = 0;
+	for(int i=0;i<MIP1ext_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(MIP1ext_dateTime.get(i).equals(common_dateTime.get(j))){
                     MIP1ext_values_extended.add(j,MIP1ext_values.get(i));
-                    MIP1ext_index.add(j);
                     current = j+1;
                     if(!(i==MIP1ext_dateTime.size()-1)){
                         break;
@@ -1192,12 +1769,11 @@ public class CSVParser {
                 }
             }
         }
-        current = 0;
-        for(int i=0;i<MIP2int_dateTime.size();i++){
+	current = 0;
+	for(int i=0;i<MIP2int_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(MIP2int_dateTime.get(i).equals(common_dateTime.get(j))){
                     MIP2int_values_extended.add(j,MIP2int_values.get(i));
-                    MIP2int_index.add(j);
                     current = j+1;
                     if(!(i==MIP2int_dateTime.size()-1)){
                         break;
@@ -1216,12 +1792,11 @@ public class CSVParser {
                 }
             }
         }
-        current = 0;
-        for(int i=0;i<MIP2ext_dateTime.size();i++){
+	current = 0;
+	for(int i=0;i<MIP2ext_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(MIP2ext_dateTime.get(i).equals(common_dateTime.get(j))){
                     MIP2ext_values_extended.add(j,MIP2ext_values.get(i));
-                    MIP2ext_index.add(j);
                     current = j+1;
                     if(!(i==MIP2ext_dateTime.size()-1)){
                         break;
@@ -1240,38 +1815,11 @@ public class CSVParser {
                 }
             }
         }
-        
-        current = 0;
-        for(int i=0;i<MIP3ext_dateTime.size();i++){
-            for(int j=current;j<common_dateTime.size();j++){
-                if(MIP3ext_dateTime.get(i).equals(common_dateTime.get(j))){
-                    MIP3ext_values_extended.add(j,MIP3ext_values.get(i));
-                    MIP3ext_index.add(j);
-                    current = j+1;
-                    if(!(i==MIP3ext_dateTime.size()-1)){
-                        break;
-                    }
-                }else{
-                    if (i == 0){
-                        i++;
-                    }
-                    if(i==MIP3ext_dateTime.size()-1){
-                        MIP3ext_values_extended.add(j,MIP3ext_values.get(i));
-                        current = j+1;
-                    }else{
-                        MIP3ext_values_extended.add(j,MIP3ext_values.get(i-1));
-                        current = j+1;
-                    }
-                    
-                }
-            }
-        }
-        current = 0;
-        for(int i=0;i<MIP3int_dateTime.size();i++){
+	current = 0;
+	for(int i=0;i<MIP3int_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(MIP3int_dateTime.get(i).equals(common_dateTime.get(j))){
                     MIP3int_values_extended.add(j,MIP3int_values.get(i));
-                    MIP3int_index.add(j);
                     current = j+1;
                     if(!(i==MIP3int_dateTime.size()-1)){
                         break;
@@ -1284,20 +1832,155 @@ public class CSVParser {
                         MIP3int_values_extended.add(j,MIP3int_values.get(i));
                         current = j+1;
                     }else{
-                        MIP3int_values_extended.add(j,MIP3int_values.get(i-1));
+                        MIP3int_values_extended.add(j,MIP3int_values.get(i-1)); 
                         current = j+1;
                     }
-                    
                 }
             }
         }
-        /*
-        current = 0;
-        for(int i=0;i<stack_monitor_dateTime.size();i++){
+	current = 0;
+	for(int i=0;i<MIP3ext_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(MIP3ext_dateTime.get(i).equals(common_dateTime.get(j))){
+                    MIP3ext_values_extended.add(j,MIP3ext_values.get(i));
+                    current = j+1;
+                    if(!(i==MIP3ext_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==MIP3ext_dateTime.size()-1){
+                        MIP3ext_values_extended.add(j,MIP3ext_values.get(i));
+                        current = j+1;
+                    }else{
+                        MIP3ext_values_extended.add(j,MIP3ext_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<Talia_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(Talia_dateTime.get(i).equals(common_dateTime.get(j))){
+                    Talia_values_extended.add(j,Talia_values.get(i));
+                    current = j+1;
+                    if(!(i==Talia_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==Talia_dateTime.size()-1){
+                        Talia_values_extended.add(j,Talia_values.get(i));
+                        current = j+1;
+                    }else{
+                        Talia_values_extended.add(j,Talia_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<BBS2_Upper_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(BBS2_Upper_dateTime.get(i).equals(common_dateTime.get(j))){
+                    BBS2_Upper_values_extended.add(j,BBS2_Upper_values.get(i));
+                    current = j+1;
+                    if(!(i==BBS2_Upper_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==BBS2_Upper_dateTime.size()-1){
+                        BBS2_Upper_values_extended.add(j,BBS2_Upper_values.get(i));
+                        current = j+1;
+                    }else{
+                        BBS2_Upper_values_extended.add(j,BBS2_Upper_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<BBS2_down_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(BBS2_down_dateTime.get(i).equals(common_dateTime.get(j))){
+                    BBS2_down_values_extended.add(j,BBS2_down_values.get(i));
+                    current = j+1;
+                    if(!(i==BBS2_down_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==BBS2_down_dateTime.size()-1){
+                        BBS2_down_values_extended.add(j,BBS2_down_values.get(i));
+                        current = j+1;
+                    }else{
+                        BBS2_down_values_extended.add(j,BBS2_down_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<BBS1_Geigerbox_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(BBS1_Geigerbox_dateTime.get(i).equals(common_dateTime.get(j))){
+                    BBS1_Geigerbox_values_extended.add(j,BBS1_Geigerbox_values.get(i));
+                    current = j+1;
+                    if(!(i==BBS1_Geigerbox_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==BBS1_Geigerbox_dateTime.size()-1){
+                        BBS1_Geigerbox_values_extended.add(j,BBS1_Geigerbox_values.get(i));
+                        current = j+1;
+                    }else{
+                        BBS1_Geigerbox_values_extended.add(j,BBS1_Geigerbox_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<Manuela_Geiger_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(Manuela_Geiger_dateTime.get(i).equals(common_dateTime.get(j))){
+                    Manuela_Geiger_values_extended.add(j,Manuela_Geiger_values.get(i));
+                    current = j+1;
+                    if(!(i==Manuela_Geiger_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==Manuela_Geiger_dateTime.size()-1){
+                        Manuela_Geiger_values_extended.add(j,Manuela_Geiger_values.get(i));
+                        current = j+1;
+                    }else{
+                        Manuela_Geiger_values_extended.add(j,Manuela_Geiger_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<stack_monitor_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
                 if(stack_monitor_dateTime.get(i).equals(common_dateTime.get(j))){
                     stack_monitor_values_extended.add(j,stack_monitor_values.get(i));
-                    stack_monitor_index.add(j);
                     current = j+1;
                     if(!(i==stack_monitor_dateTime.size()-1)){
                         break;
@@ -1315,7 +1998,79 @@ public class CSVParser {
                     }
                 }
             }
-        }*/
+        }
+	current = 0;
+	for(int i=0;i<Hi_stack_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(Hi_stack_dateTime.get(i).equals(common_dateTime.get(j))){
+                    Hi_stack_values_extended.add(j,Hi_stack_values.get(i));
+                    current = j+1;
+                    if(!(i==Hi_stack_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==Hi_stack_dateTime.size()-1){
+                        Hi_stack_values_extended.add(j,Hi_stack_values.get(i));
+                        current = j+1;
+                    }else{
+                        Hi_stack_values_extended.add(j,Hi_stack_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<Cyclotron_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(Cyclotron_dateTime.get(i).equals(common_dateTime.get(j))){
+                    Cyclotron_values_extended.add(j,Cyclotron_values.get(i));
+                    current = j+1;
+                    if(!(i==Cyclotron_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==Cyclotron_dateTime.size()-1){
+                        Cyclotron_values_extended.add(j,Cyclotron_values.get(i));
+                        current = j+1;
+                    }else{
+                        Cyclotron_values_extended.add(j,Cyclotron_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	for(int i=0;i<Neutron_Probe_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(Neutron_Probe_dateTime.get(i).equals(common_dateTime.get(j))){
+                    Neutron_Probe_values_extended.add(j,Neutron_Probe_values.get(i));
+                    current = j+1;
+                    if(!(i==Neutron_Probe_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==Neutron_Probe_dateTime.size()-1){
+                        Neutron_Probe_values_extended.add(j,Neutron_Probe_values.get(i));
+                        current = j+1;
+                    }else{
+                        Neutron_Probe_values_extended.add(j,Neutron_Probe_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
+	current = 0;
+	
+	
         //Write arrays to file
         common_roundedtime.add(0,"Time");
         if (_241c_vent_ut_values_extended.size()>0)
