@@ -23,15 +23,15 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class CSVParser {
-    public static void main(String[] args) throws IOException {
-        int hr_start = 6;
-        int hr_end = 7;
+public class GenerateFile {
+    //public static void main(String[] args) throws IOException {
+    GenerateFile(String file_import, String file_export, int hr_start, int hr_end)throws IOException{
         int min_start = 00;
         int min_end = 60;
-        String fileName= "C:temp\\2018-11-28\\import.csv";
+        //String fileName= "C:temp\\2018-11-28\\import.csv";
+        
         ArrayProvider ap = new ArrayProvider();
-        String[] lines = ap.readLines(fileName);
+        String[] lines = ap.readLines(file_import);
         int startindex = 0;
         int endindex = 0;
         for (int i = 0;i<lines.length;i++){
@@ -246,9 +246,12 @@ public class CSVParser {
         ArrayList<String> stack_monitor_values_extended = new ArrayList();
         ArrayList<String> stack_monitor_time = new ArrayList();
         ArrayList<String> stack_monitor_roundedtime = new ArrayList();
-        ArrayList<String> stack_monitor_activity_values = new ArrayList();
-        ArrayList<String> stack_monitor_volume_values = new ArrayList();
-        ArrayList<String> stack_monitor_timeoriginal = new ArrayList();
+        
+        ArrayList<String> stack_monitor_flow = new ArrayList();
+        ArrayList<String> stack_monitor_flow_values = new ArrayList();
+        ArrayList<String> stack_monitor_flow_values_extended = new ArrayList();
+        ArrayList<String> stack_monitor_flow_time = new ArrayList();
+        ArrayList<String> stack_monitor_flow_roundedtime = new ArrayList();
         
         ArrayList<String> Hi_stack = new ArrayList();
         ArrayList<String> Hi_stack_values = new ArrayList();
@@ -308,6 +311,7 @@ public class CSVParser {
         String[] BBS1_Geigerbox_split = null;
         String[] Manuela_Geiger_split = null;
         String[] stack_monitor_split = null;
+        String[] stack_monitor_flow_split = null;
         String[] Hi_stack_split = null;
         String[] Cyclotron_split = null;
         String[] Neutron_Probe_split = null;
@@ -412,8 +416,11 @@ public class CSVParser {
             if (line.contains("Manuela Geiger")){
                 Manuela_Geiger.add(line);
             }
-            if (line.contains("stack monitor")){
+            if (line.contains("stack monitor") && line.contains("Activity concentration")){
                 stack_monitor.add(line);
+            }
+            if (line.contains("stack monitor") && line.contains("Volume flow rate")){
+                stack_monitor_flow.add(line);
             }
             if (line.contains("Hi stack")){
                 Hi_stack.add(line);
@@ -593,6 +600,11 @@ public class CSVParser {
             stack_monitor_values.add(stack_monitor_split[3]);
             stack_monitor_time.add(stack_monitor_split[1]);
         }
+        for (int i=0;i<stack_monitor_flow.size();i++){
+            stack_monitor_flow_split = stack_monitor_flow.get(i).split(",");
+            stack_monitor_flow_values.add(stack_monitor_flow_split[3]);
+            stack_monitor_flow_time.add(stack_monitor_flow_split[1]);
+        }
         for (int i=0;i<Hi_stack.size();i++){
             Hi_stack_split = Hi_stack.get(i).split(",");
             Hi_stack_values.add(Hi_stack_split[3]);
@@ -608,25 +620,7 @@ public class CSVParser {
             Neutron_Probe_values.add(Neutron_Probe_split[3]);
             Neutron_Probe_time.add(Neutron_Probe_split[1]);
         }
-        
-        /*
-        //Seperate activity from volume in stack_monitor
-        for (int i = 0;i < stack_monitor_values.size();i++){
-            if(i == 0){
-               stack_monitor_volume_values.add(stack_monitor_values.get(i)); 
-            }
-            else if (i < stack_monitor_values.size()-4){
-                stack_monitor_volume_values.add(stack_monitor_values.get(i*2));
-                stack_monitor_activity_values.add(stack_monitor_values.get((i*2)-1));
-            }
-            
-        }
-        
-        //System.out.println("volume size: "+stack_monitor_volume_values.size()+"\nActivity: "+stack_monitor_activity_values.size());
-        //Make one single time list for stack_monitor. Use only every second entry
-        /*for (int i = 0;i < stack_monitor_timeoriginal.size();i++){
-            stack_monitor_time.add(stack_monitor_timeoriginal.get(i*2));
-        }*/
+               
         //Create common time axes
         String com_time_str;
         
@@ -911,6 +905,14 @@ public class CSVParser {
             time_arr[2] = df.format(round(time_double));
             stack_monitor_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
         }
+        for (int i=0;i<stack_monitor_flow_time.size();i++){
+            time = stack_monitor_flow_time.get(i);
+            time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
+            String[] time_arr = time.split(":");
+            double time_double = Double.parseDouble(time_arr[2]);
+            time_arr[2] = df.format(round(time_double));
+            stack_monitor_flow_roundedtime.add(i,time_arr[0]+":"+time_arr[1]+":"+time_arr[2]);
+        }
         for (int i=0;i<Hi_stack_time.size();i++){
             time = Hi_stack_time.get(i);
             time = time.replaceAll("\\d\\d\\d\\d-\\d\\d-\\d\\d\\s","");
@@ -971,6 +973,7 @@ public class CSVParser {
         ArrayList<Date> BBS1_Geigerbox_dateTime = new ArrayList<Date>();
         ArrayList<Date> Manuela_Geiger_dateTime = new ArrayList<Date>();
         ArrayList<Date> stack_monitor_dateTime = new ArrayList<Date>();
+        ArrayList<Date> stack_monitor_flow_dateTime = new ArrayList<Date>();
         ArrayList<Date> Hi_stack_dateTime = new ArrayList<Date>();
         ArrayList<Date> Cyclotron_dateTime = new ArrayList<Date>();
         ArrayList<Date> Neutron_Probe_dateTime = new ArrayList<Date>();
@@ -1212,6 +1215,13 @@ public class CSVParser {
 	for (String dateString : stack_monitor_roundedtime) {
             try {
                 stack_monitor_dateTime.add(simpleDateFormat.parse(dateString));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        for (String dateString : stack_monitor_flow_roundedtime) {
+            try {
+                stack_monitor_flow_dateTime.add(simpleDateFormat.parse(dateString));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -1999,6 +2009,29 @@ public class CSVParser {
                 }
             }
         }
+        current = 0;
+	for(int i=0;i<stack_monitor_flow_dateTime.size();i++){
+            for(int j=current;j<common_dateTime.size();j++){
+                if(stack_monitor_flow_dateTime.get(i).equals(common_dateTime.get(j))){
+                    stack_monitor_flow_values_extended.add(j,stack_monitor_flow_values.get(i));
+                    current = j+1;
+                    if(!(i==stack_monitor_flow_dateTime.size()-1)){
+                        break;
+                    }
+                }else{
+                    if (i == 0){
+                        i++;
+                    }
+                    if(i==stack_monitor_flow_dateTime.size()-1){
+                        stack_monitor_flow_values_extended.add(j,stack_monitor_flow_values.get(i));
+                        current = j+1;
+                    }else{
+                        stack_monitor_flow_values_extended.add(j,stack_monitor_flow_values.get(i-1)); 
+                        current = j+1;
+                    }
+                }
+            }
+        }
 	current = 0;
 	for(int i=0;i<Hi_stack_dateTime.size();i++){
             for(int j=current;j<common_dateTime.size();j++){
@@ -2169,7 +2202,10 @@ public class CSVParser {
             Manuela_Geiger_values_extended.add(0,"Manuela Geiger");
         }
 	if (stack_monitor_values_extended.size()>0){
-            stack_monitor_values_extended.add(0,"stack monitor");
+            stack_monitor_values_extended.add(0,"stack monitor activity concentration");
+        }
+        if (stack_monitor_flow_values_extended.size()>0){
+            stack_monitor_flow_values_extended.add(0,"stack monitor flow");
         }
 	if (Hi_stack_values_extended.size()>0){
             Hi_stack_values_extended.add(0,"Hi stack");
@@ -2184,7 +2220,7 @@ public class CSVParser {
 	
         
         
-        FileWriter writer = new FileWriter("C:temp\\export.csv");
+        FileWriter writer = new FileWriter(file_export);
         
         //writer.write("Time,9.241c vent ut,MIP2int.,MIP2ext.,MIP3ext.\n");
         for (int i = 0;i < common_roundedtime.size();i++){
@@ -2288,6 +2324,9 @@ public class CSVParser {
             if (stack_monitor_values_extended.size()>0){
                 writer.write(stack_monitor_values_extended.get(i)+",");
             }
+            if (stack_monitor_flow_values_extended.size()>0){
+                writer.write(stack_monitor_flow_values_extended.get(i)+",");
+            }
             if (Hi_stack_values_extended.size()>0){
                 writer.write(Hi_stack_values_extended.get(i)+",");
             }
@@ -2309,6 +2348,8 @@ public class CSVParser {
         System.out.println("\nSize of MIP3ext_values_extended: \n"+MIP3ext_values_extended.size());
         System.out.println("\nSize of MIP2ext_values_extended: \n"+MIP2ext_values_extended.size());
         System.out.println("\nSize of MIP2int_values_extended: \n"+MIP2int_values_extended.size());
+        System.out.println("\nSize of Stack monitor_values_extended: \n"+stack_monitor_values_extended.size());
+        System.out.println("\nSize of Stack monitor_flow_values_extended: \n"+stack_monitor_flow_values_extended.size());
         System.out.println("\nSize of _241c_vent_ut_values_extended: \n"+_241c_vent_ut_values_extended.size());
         System.out.println("\nSize of common roundedtime: \n"+common_roundedtime.size());
     }
