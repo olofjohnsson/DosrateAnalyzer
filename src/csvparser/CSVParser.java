@@ -25,11 +25,11 @@ import java.util.stream.Collectors;
 
 public class CSVParser {
     public static void main(String[] args) throws IOException {
-        int hr_start = 00;
-        int hr_end = 01;
+        int hr_start = 6;
+        int hr_end = 7;
         int min_start = 00;
         int min_end = 60;
-        String fileName= "C:temp\\test.csv";
+        String fileName= "C:temp\\2018-11-28\\import.csv";
         ArrayProvider ap = new ArrayProvider();
         String[] lines = ap.readLines(fileName);
         int startindex = 0;
@@ -2069,24 +2069,119 @@ public class CSVParser {
             }
         }
 	current = 0;
-	
-	
+
         //Write arrays to file
         common_roundedtime.add(0,"Time");
-        if (_241c_vent_ut_values_extended.size()>0)
-            _241c_vent_ut_values_extended.add(0,"9.241c vent ut,");
-        if (MIP1int_values_extended.size()>0)
-            MIP1int_values_extended.add(0,"MIP 1 int.,");
-        if (MIP1ext_values_extended.size()>0)
-            MIP1ext_values_extended.add(0,"MIP 1 ext.,");
-        if (MIP2int_values_extended.size()>0)
-            MIP2int_values_extended.add(0,"MIP 2 int.,");
-        if (MIP2ext_values_extended.size()>0)
-            MIP2ext_values_extended.add(0,"MIP 2 ext.,");
-        if (MIP3int_values_extended.size()>0)
-            MIP3int_values_extended.add(0,"MIP 3 int.,");
-        if (MIP3ext_values_extended.size()>0)
-            MIP3ext_values_extended.add(0,"MIP 3 ext.,");
+        if (_221b_values_extended.size()>0){
+            _221b_values_extended.add(0,"99.221b");
+        }
+	if (_221c_values_extended.size()>0){
+            _221c_values_extended.add(0,"99.221c");
+        }
+	if (_221d_values_extended.size()>0){
+            _221d_values_extended.add(0,"99.221d");
+        }
+	if (_221f_values_extended.size()>0){
+            _221f_values_extended.add(0,"99.221f");
+        }
+	if (_227_values_extended.size()>0){
+            _227_values_extended.add(0,"99.227");
+        }
+	if (_233_values_extended.size()>0){
+            _233_values_extended.add(0,"99.233");
+        }
+	if (_236a_values_extended.size()>0){
+            _236a_values_extended.add(0,"99.236a");
+        }
+	if (_238c_values_extended.size()>0){
+            _238c_values_extended.add(0,"99.238c");
+        }
+	if (_239_left_values_extended.size()>0){
+            _239_left_values_extended.add(0,"99.239 left");
+        }
+	if (_239_right_values_extended.size()>0){
+            _239_right_values_extended.add(0,"99.239 right");
+        }
+	if (_240c_values_extended.size()>0){
+            _240c_values_extended.add(0,"99.240c");
+        }
+	if (_241a_teknik_values_extended.size()>0){
+            _241a_teknik_values_extended.add(0,"99.241a teknik");
+        }
+	if (_241b_technik_values_extended.size()>0){
+            _241b_technik_values_extended.add(0,"99.241b technik");
+        }
+	if (_241c_vent_ut_values_extended.size()>0){
+            _241c_vent_ut_values_extended.add(0,"99.241c vent ut");
+        }
+	if (_242_values_extended.size()>0){
+            _242_values_extended.add(0,"99.242");
+        }
+	if (_256b_values_extended.size()>0){
+            _256b_values_extended.add(0,"99.256b");
+        }
+	if (_256c_values_extended.size()>0){
+            _256c_values_extended.add(0,"99.256c");
+        }
+	if (_256d_values_extended.size()>0){
+            _256d_values_extended.add(0,"99.256d");
+        }
+	if (_257a_values_extended.size()>0){
+            _257a_values_extended.add(0,"99.257a");
+        }
+	if (_257b_values_extended.size()>0){
+            _257b_values_extended.add(0,"99.257b");
+        }
+	if (_01_226_floor_values_extended.size()>0){
+            _01_226_floor_values_extended.add(0,"01.226 floor");
+        }
+	if (MIP1int_values_extended.size()>0){
+            MIP1int_values_extended.add(0,"MIP 1 int.");
+        }
+	if (MIP1ext_values_extended.size()>0){
+            MIP1ext_values_extended.add(0,"MIP 1 ext.");
+        }
+	if (MIP2int_values_extended.size()>0){
+            MIP2int_values_extended.add(0,"MIP 2 int.");
+        }
+	if (MIP2ext_values_extended.size()>0){
+            MIP2ext_values_extended.add(0,"MIP 2 ext.");
+        }
+	if (MIP3int_values_extended.size()>0){
+            MIP3int_values_extended.add(0,"MIP 3 int.");
+        }
+	if (MIP3ext_values_extended.size()>0){
+            MIP3ext_values_extended.add(0,"MIP 3 ext.");
+        }
+	if (Talia_values_extended.size()>0){
+            Talia_values_extended.add(0,"Talia");
+        }
+	if (BBS2_Upper_values_extended.size()>0){
+            BBS2_Upper_values_extended.add(0,"BBS2 Upper");
+        }
+	if (BBS2_down_values_extended.size()>0){
+            BBS2_down_values_extended.add(0,"BBS2 down");
+        }
+	if (BBS1_Geigerbox_values_extended.size()>0){
+            BBS1_Geigerbox_values_extended.add(0,"BBS1 Geigerbox");
+        }
+	if (Manuela_Geiger_values_extended.size()>0){
+            Manuela_Geiger_values_extended.add(0,"Manuela Geiger");
+        }
+	if (stack_monitor_values_extended.size()>0){
+            stack_monitor_values_extended.add(0,"stack monitor");
+        }
+	if (Hi_stack_values_extended.size()>0){
+            Hi_stack_values_extended.add(0,"Hi stack");
+        }
+	if (Cyclotron_values_extended.size()>0){
+            Cyclotron_values_extended.add(0,"Cyclotron");
+        }
+	if (Neutron_Probe_values_extended.size()>0){
+            Neutron_Probe_values_extended.add(0,"Neutron Probe");
+        }
+	
+	
         
         
         FileWriter writer = new FileWriter("C:temp\\export.csv");
@@ -2094,8 +2189,115 @@ public class CSVParser {
         //writer.write("Time,9.241c vent ut,MIP2int.,MIP2ext.,MIP3ext.\n");
         for (int i = 0;i < common_roundedtime.size();i++){
             writer.write(common_roundedtime.get(i)+",");
-            if (_241c_vent_ut_values_extended.size()>0)
-                writer.write(_241c_vent_ut_values_extended.get(i));
+            if (_221b_values_extended.size()>0){
+                writer.write(_221b_values_extended.get(i)+",");
+            }
+            if (_221c_values_extended.size()>0){
+                writer.write(_221c_values_extended.get(i)+",");
+            }
+            if (_221d_values_extended.size()>0){
+                writer.write(_221d_values_extended.get(i)+",");
+            }
+            if (_221f_values_extended.size()>0){
+                writer.write(_221f_values_extended.get(i)+",");
+            }
+            if (_227_values_extended.size()>0){
+                writer.write(_227_values_extended.get(i)+",");
+            }
+            if (_233_values_extended.size()>0){
+                writer.write(_233_values_extended.get(i)+",");
+            }
+            if (_236a_values_extended.size()>0){
+                writer.write(_236a_values_extended.get(i)+",");
+            }
+            if (_238c_values_extended.size()>0){
+                writer.write(_238c_values_extended.get(i)+",");
+            }
+            if (_239_left_values_extended.size()>0){
+                writer.write(_239_left_values_extended.get(i)+",");
+            }
+            if (_239_right_values_extended.size()>0){
+                writer.write(_239_right_values_extended.get(i)+",");
+            }
+            if (_240c_values_extended.size()>0){
+                writer.write(_240c_values_extended.get(i)+",");
+            }
+            if (_241a_teknik_values_extended.size()>0){
+                writer.write(_241a_teknik_values_extended.get(i)+",");
+            }
+            if (_241b_technik_values_extended.size()>0){
+                writer.write(_241b_technik_values_extended.get(i)+",");
+            }
+            if (_241c_vent_ut_values_extended.size()>0){
+                writer.write(_241c_vent_ut_values_extended.get(i)+",");
+            }
+            if (_242_values_extended.size()>0){
+                writer.write(_242_values_extended.get(i)+",");
+            }
+            if (_256b_values_extended.size()>0){
+                writer.write(_256b_values_extended.get(i)+",");
+            }
+            if (_256c_values_extended.size()>0){
+                writer.write(_256c_values_extended.get(i)+",");
+            }
+            if (_256d_values_extended.size()>0){
+                writer.write(_256d_values_extended.get(i)+",");
+            }
+            if (_257a_values_extended.size()>0){
+                writer.write(_257a_values_extended.get(i)+",");
+            }
+            if (_257b_values_extended.size()>0){
+                writer.write(_257b_values_extended.get(i)+",");
+            }
+            if (_01_226_floor_values_extended.size()>0){
+                writer.write(_01_226_floor_values_extended.get(i)+",");
+            }
+            if (MIP1int_values_extended.size()>0){
+                writer.write(MIP1int_values_extended.get(i)+",");
+            }
+            if (MIP1ext_values_extended.size()>0){
+                writer.write(MIP1ext_values_extended.get(i)+",");
+            }
+            if (MIP2int_values_extended.size()>0){
+                writer.write(MIP2int_values_extended.get(i)+",");
+            }
+            if (MIP2ext_values_extended.size()>0){
+                writer.write(MIP2ext_values_extended.get(i)+",");
+            }
+            if (MIP3int_values_extended.size()>0){
+                writer.write(MIP3int_values_extended.get(i)+",");
+            }
+            if (MIP3ext_values_extended.size()>0){
+                writer.write(MIP3ext_values_extended.get(i)+",");
+            }
+            if (Talia_values_extended.size()>0){
+                writer.write(Talia_values_extended.get(i)+",");
+            }
+            if (BBS2_Upper_values_extended.size()>0){
+                writer.write(BBS2_Upper_values_extended.get(i)+",");
+            }
+            if (BBS2_down_values_extended.size()>0){
+                writer.write(BBS2_down_values_extended.get(i)+",");
+            }
+            if (BBS1_Geigerbox_values_extended.size()>0){
+                writer.write(BBS1_Geigerbox_values_extended.get(i)+",");
+            }
+            if (Manuela_Geiger_values_extended.size()>0){
+                writer.write(Manuela_Geiger_values_extended.get(i)+",");
+            }
+            if (stack_monitor_values_extended.size()>0){
+                writer.write(stack_monitor_values_extended.get(i)+",");
+            }
+            if (Hi_stack_values_extended.size()>0){
+                writer.write(Hi_stack_values_extended.get(i)+",");
+            }
+            if (Cyclotron_values_extended.size()>0){
+                writer.write(Cyclotron_values_extended.get(i)+",");
+            }
+            if (Neutron_Probe_values_extended.size()>0){
+                writer.write(Neutron_Probe_values_extended.get(i)+",");
+            }
+            
             
             writer.write("\n");
             //writer.write(str+",\n");
