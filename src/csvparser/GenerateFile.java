@@ -404,13 +404,13 @@ public class GenerateFile {
             if (line.contains("Talia")){
                 Talia.add(line);
             }
-            if (line.contains("BBS2 Upper")){
+            if (line.contains("BBS 2 Upper")){
                 BBS2_Upper.add(line);
             }
-            if (line.contains("BBS2 down")){
+            if (line.contains("BBS 2 down")){
                 BBS2_down.add(line);
             }
-            if (line.contains("BBS1 Geigerbox")){
+            if (line.contains("BBS 1 Geigerbox")){
                 BBS1_Geigerbox.add(line);
             }
             if (line.contains("Manuela Geiger")){
