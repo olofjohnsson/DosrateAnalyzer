@@ -47,8 +47,8 @@ public class SmartGuardLogModifier extends javax.swing.JFrame {
     public File file;
     String file_import = "C:\\temp\\import.csv";
     String file_export = "C:\\temp\\export.csv";
-    int hr_start = 6;
-    int hr_end = 8;
+    int hr_start = 8;
+    int hr_end = 10;
     /**
      * Creates new form SmartGuardLogModifier
      */
