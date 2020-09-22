@@ -45,8 +45,8 @@ import javax.swing.JFileChooser;
  */
 public class SmartGuardLogModifier extends javax.swing.JFrame {
     public File file;
-    String file_import = "C:\\temp\\import.csv";
-    String file_export = "C:\\temp\\export.csv";
+    String file_import = "C:\\temp\\VMS.csv";
+    String file_export = "C:\\temp\\VMS_Modified.csv";
     int hr_start = 8;
     int hr_end = 10;
     /**
@@ -75,6 +75,8 @@ public class SmartGuardLogModifier extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         fileBrowser.setCurrentDirectory(new java.io.File("C:\\temp\\2018-11-28"));
 
@@ -116,6 +118,22 @@ public class SmartGuardLogModifier extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem2);
+
+        jMenuItem4.setText("Instruktion");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
+        jMenuItem3.setText("Om");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
 
         jMenuBar1.add(jMenu1);
 
@@ -197,6 +215,14 @@ public class SmartGuardLogModifier extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new About(this).setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        new Instruktion(this).setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +267,8 @@ public class SmartGuardLogModifier extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables

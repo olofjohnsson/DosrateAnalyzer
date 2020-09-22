@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class ModifyCSV {
     ModifyCSV() throws IOException{
-        String file_import = "C:temp\\2018-11-28\\import.csv";
+        String file_import = "C:temp\\VMS.csv";
         String file_export = "C:temp\\export.csv";
         new GenerateFile(file_import, file_export, 6, 8);
     }
